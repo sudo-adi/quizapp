@@ -6,6 +6,11 @@ import ToggleTheme from './components/ui/ToggleTheme'
 import QuizProvider from './context/QuizProvider'
 import { GlobalStyles } from './styles/Global'
 import { themes } from './styles/Theme'
+import NavBar from './components/ui/NavBar'
+
+
+
+
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -23,6 +28,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <NavBar />
       <GlobalStyles />
       <QuizProvider>
         <ToggleTheme
